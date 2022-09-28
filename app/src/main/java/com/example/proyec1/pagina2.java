@@ -2,7 +2,6 @@ package com.example.proyec1;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -27,9 +26,9 @@ public class pagina2 extends AppCompatActivity {
         double gv2 = intent.getDoubleExtra("v2",0);
         double gv3 = intent.getDoubleExtra("v3", 0);
 
-        tv7.setText("Porcentaje de votos: "+gv1+"%");
-        tv8.setText("Porcentaje de votos: "+gv2+"%");
-        tv9.setText("Porcentaje de votos: "+gv3+"%");
+        tv7.setText("Porcentaje de votos: "+String.format("%.2f",gv1)+"%");
+        tv8.setText("Porcentaje de votos: "+String.format("%.2f",gv2)+"%");
+        tv9.setText("Porcentaje de votos: "+String.format("%.2f",gv3)+"%");
 
 
 

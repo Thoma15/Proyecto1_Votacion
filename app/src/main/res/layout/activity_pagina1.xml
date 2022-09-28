@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00673AB7"
     tools:context=".pagina1">
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="113dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img3"
@@ -51,7 +52,7 @@
 
         <RadioButton
             android:id="@+id/rb3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="148dp"
             android:text="VIVIAN VALENZUELA" />
 
@@ -62,21 +63,21 @@
         android:layout_width="0dp"
         android:layout_height="52dp"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="54dp"
         android:text="Universidad Tecnológica de Panamá"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/img2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/tvres" />
+        app:layout_constraintTop_toTopOf="@+id/tvres" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="12dp"
         android:text="Finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,7 +87,7 @@
     <ImageView
         android:id="@+id/img5"
         android:layout_width="0dp"
-        android:layout_height="137dp"
+        android:layout_height="136dp"
         android:layout_marginEnd="14dp"
         app:layout_constraintEnd_toStartOf="@+id/tv2"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +111,7 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="161dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="161dp"
         app:layout_constraintBottom_toBottomOf="@+id/img3"
         app:layout_constraintEnd_toEndOf="@+id/img3"
         app:layout_constraintStart_toStartOf="@+id/img3"
@@ -146,8 +147,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvnombre"
         app:layout_constraintEnd_toEndOf="@+id/img3"
         app:layout_constraintStart_toStartOf="@+id/img3"
         app:layout_constraintTop_toBottomOf="@+id/img3"
@@ -167,8 +168,8 @@
         android:id="@+id/tvg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvnombre"
         app:layout_constraintTop_toTopOf="@+id/button3" />
 
     <Button
@@ -176,12 +177,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginEnd="6dp"
         android:layout_marginBottom="14dp"
         android:text="Atrás"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvnombre"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/img2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

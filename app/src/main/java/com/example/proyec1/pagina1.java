@@ -9,11 +9,13 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.lang.String;
+
 import java.util.ArrayList;
 
 
 public class pagina1 extends AppCompatActivity {
-    TextView tvres,tvg;
+    TextView tvres,tvg, tvnombre;
     RadioButton rb1, rb2,rb3;
     Button button2, button3,button4;
 
@@ -24,6 +26,7 @@ public class pagina1 extends AppCompatActivity {
 
         tvres = findViewById(R.id.tvres);
         tvg = findViewById(R.id.tvg);
+        tvnombre = findViewById(R.id.tvnombre);
         rb1 = findViewById(R.id.rb1);
         rb2 = findViewById(R.id.rb2);
         rb3 = findViewById(R.id.rb3);
@@ -35,8 +38,13 @@ public class pagina1 extends AppCompatActivity {
         actionBar.setTitle("Votaciones");
 
         Intent intent = getIntent();
-        String getced = intent.getStringExtra("cedula");
-        tvres.setText("Bienvenido estudiante! " + getced);
+        String getced[] = intent.getStringArrayExtra("cedula");
+        String getnom[] = intent.getStringArrayExtra("nombres");
+        String cedula = String.valueOf(getced);
+        String nombres = String.valueOf(getnom);
+        String cedulv = getIntent().getDataString("cedulav");
+
+        tvres.setText("Bienvenido!"+getced);
 
 
         ArrayList<Integer> list = new ArrayList();
@@ -57,22 +65,20 @@ public class pagina1 extends AppCompatActivity {
                 } else {
                     if (rb1.isChecked()) {
                         list.add(0, list.get(0) + 1);
-
-
+                        tvnombre.setText("Gracias por su participación " + nombres);
                     } else if (rb2.isChecked()) {
                         list.add(1, list.get(1) + 1);
+                        tvnombre.setText("Gracias por su participación " +nombres);
 
                     } else if (rb3.isChecked()) {
                         list.add(2, list.get(2) + 1);
-
+                        tvnombre.setText("Gracias por su participación " +nombres);
                     }
-                    // Intent intent = new Intent(pagina1.this, MainActivity.class);
-                    //startActivity(intent);
-                }
+                    //else if(rb1.isChecked() == true && rb2.isChecked() == true && rb3.isChecked() == true){
+                    //tvnombre.setText("Gracias por su participación"+r);
+                }}}
 
-
-            }
-        });
+        );
 
 
 
