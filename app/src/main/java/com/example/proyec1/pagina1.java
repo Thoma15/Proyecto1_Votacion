@@ -37,6 +37,7 @@ public class pagina1 extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Votaciones");
 
+        //Conseguir valores de cedula y nombres del MainActivity.java
         Intent intent = getIntent();
         String getced[] = intent.getStringArrayExtra("cedula");
         String getnom[] = intent.getStringArrayExtra("nombres");
